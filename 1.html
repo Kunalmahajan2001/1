@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="menu-button">&#9776;</button>
+    </header>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js">
+        $(document).ready(function() {
+    $('.menu-btn').click(function() {
+        $('nav ul').slideToggle();
+    });
+
+    $(window).resize(function() {
+        if ($(window).width() > 768) {
+            $('nav ul').removeAttr('style');
+        }
+    });
+});
+    </script>
+</body>
+</html>
